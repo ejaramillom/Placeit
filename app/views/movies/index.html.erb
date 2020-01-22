@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Place it!</h1>
+    </div>
+
+
+    <div class="col-sm-12">
+      <h1>Películas</h1>
+      <div class="text-right">
+        <%= link_to "Publicar Película", new_movie_path, class: "btn btn-primary" %>
+      </div>
+        <% @movies.each do |movie| %>
+        <div class="col-sm-6">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <p class="card-text"><%= movie.name %></p>
+              <img src="<%= movie.url %>" class="card-img-top" alt="<%= movie.id %>">
+            </div>
+          </div>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>
